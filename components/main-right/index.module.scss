@@ -1,0 +1,30 @@
+.main_right {
+  width: 15.375rem;
+  margin-left: 4.375rem;
+  .card {
+    border-radius: 2%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  }
+  .blogger-wrapper {
+    width: 100%;
+
+    background-color: #fff;
+    img {
+      border-radius: 2%;
+    }
+    .blogger {
+      padding: 0.625rem;
+      .name {
+        font-size: $size-8;
+        margin-bottom: $size-3;
+      }
+    }
+  }
+  .classes-wrapper {
+    margin-top: 1.25rem;
+    padding: 0.625rem;
+    span {
+      font-size: 1.25rem;
+    }
+  }
+}

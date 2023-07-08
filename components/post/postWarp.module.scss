@@ -1,0 +1,29 @@
+.grid {
+  width: 100%;
+  .content {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.8rem;
+    .content_flex {
+      span {
+        margin-right: 40px !important;
+        font-size: 0.875rem !important;
+        // padding: 0 4px;
+      }
+    }
+
+    a {
+      color: $color-home-title !important;
+      h3:hover {
+        color: $color_article;
+        transition: all 0.1s;
+      }
+    }
+  }
+  .excerpt {
+    margin-top: 1.25rem;
+    max-height: 18.75rem;
+    overflow: hidden;
+  }
+}
