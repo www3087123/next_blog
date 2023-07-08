@@ -29,7 +29,7 @@ const ArticlesPage = ({
           content='A list of all programming-related tutorials and posts!'
         />
       </Head>
-      <div className={styles['marginTop']}></div>
+      <div className={'marginTop'}></div>
       <div className={styles['main']}>
         <AllArticles data={data} />;
       </div>

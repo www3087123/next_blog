@@ -1,16 +1,7 @@
 import styles from './index.module.scss';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { LOCALDOMAIN } from '@/utils';
-import axios from 'axios';
-interface IProps {
-  class: string;
-}
-const MainRight = ({
-  data,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log('data', data);
+const MainRight = () => {
   return (
     <div className={styles['main_right']}>
       <div className={classNames(styles['blogger-wrapper'], styles['card'])}>
@@ -28,10 +19,5 @@ const MainRight = ({
       </div> */}
     </div>
   );
-};
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await axios.get(`/api/hello`);
-  console.log('res', res.data);
-  return { props: { data: res.data } };
 };
 export default MainRight;

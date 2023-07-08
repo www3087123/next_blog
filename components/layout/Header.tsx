@@ -7,8 +7,8 @@ import { useRouter } from 'next/router';
 const items = [
   { key: '/', title: '🏠 首页' },
   { key: '/articles', title: '💻 前端文章' },
-  { key: '/articlesSever', title: '📦 后端文章' },
-  { key: '/friends', title: '友联' },
+  // { key: '/articlesSever', title: '📦 后端文章' },
+  // { key: '/friends', title: '友联' },
   { key: '/me', title: '关于' },
 ];
 

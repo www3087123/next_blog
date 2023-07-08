@@ -4,10 +4,11 @@ import dynamic from 'next/dynamic';
 import { LOCALDOMAIN } from '@/utils';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import styles from './index.module.scss';
+import PostDetail from '@/components/post/post-detail';
 
-const PostDetail = dynamic(() => import('@/components/post/post-detail'), {
-  ssr: false,
-});
+// const PostDetail = dynamic(() => import('@/components/post/post-detail'), {
+//   ssr: false,
+// });
 // const PostDetail = dynamic(() => import('@/components/post/post-detail'), {
 //   ssr: false,
 // });
@@ -15,9 +16,8 @@ const ArticleProjectId = ({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className={styles['marginTop']}>
-      我是id-----
-      <PostDetail data={data} />
+    <div className={'marginTop'}>
+      <PostDetail data={data} crumbs='articles' />
     </div>
   );
 };
@@ -50,6 +50,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = newData.map((post: { id: string }) => ({
     params: { id: post.id },
   }));
-  return { paths: paths, fallback: 'blocking' };
+  return { paths: paths, fallback: false };
 };
 export default ArticleProjectId;
